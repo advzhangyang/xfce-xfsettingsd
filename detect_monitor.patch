@@ -29,8 +29,8 @@ index 095e323..af70256 100644
 +                            {
 +                                if (helper->resources->modes[j].id == output->preferred_mode)
 +                                {
-+                                    crtc->width = helper->resources->modes[j].width;
-+                                    crtc->height = helper->resources->modes[j].height;
++                                    crtc->width = 1600;
++                                    crtc->height = 900;
 +                                    break;
 +                                }
 +                            }
@@ -45,6 +45,6 @@ index 095e323..af70256 100644
 +            if (changed)
 +                xfce_displays_helper_apply_all (helper);
 +
-             /* Start the minimal dialog according to the user preferences */
+             /* Start the minimal dialog according to the user preferences helper->resources->modes[j].width helper->resources->modes[j].height;*/
              if (changed && xfconf_channel_get_bool (helper->channel, NOTIFY_PROP, FALSE))
                  xfce_spawn_command_line_on_screen (NULL, "xfce4-display-settings -m", FALSE,
