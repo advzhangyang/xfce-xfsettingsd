@@ -31,6 +31,7 @@ index 095e323..af70256 100644
 +                                {
 +                                    crtc->width = helper->resources->modes[j].width;
 +                                    crtc->height = helper->resources->modes[j].height;
++                                    xfsettings_dbg (XFSD_DEBUG_DISPLAYS, "enabling crtc for %dx%d", crtc->width , crtc->height);
 +                                    break;
 +                                }
 +                            }
